@@ -1,19 +1,19 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-var url = "http://wikipedia.org";
+var url = "https://github.com/edvmorango?tab=repositories";
 
 request(url, function (error, response, body) {
   if (!error) {
     var $ = cheerio.load(body)
 
-    var title = $('title').text();
-    var content = $('body').text();
-    var freeArticles = $('.central-featured-lang.lang1 a small').text()
+    var title = $('.d-inline-block a').text();
+    
+  
 
     console.log('URL: ' + url);
-    console.log('Title: ' + title);
-    console.log('EN articles: ' + freeArticles);
+    console.log('Project: ' + title);
+   
   }
   else {
     console.log("We’ve encountered an error: " + error);
