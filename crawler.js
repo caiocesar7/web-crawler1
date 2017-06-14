@@ -16,6 +16,6 @@ request(url, function (error, response, body) {
    
   }
   else {
-    console.log("We’ve encountered an error: " + error);
+    console.log("Wea’ve encountered an error: " + error);
   }
 });
